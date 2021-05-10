@@ -1,0 +1,128 @@
+.form-group.material-style {
+    position: relative;
+    margin-top: 1rem;
+}
+.form-group.material-style .form-control {
+    border-radius: 0px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.form-group.material-style .form-control:placeholder-shown + label {
+    top: 0rem;
+    font-size: 15px;
+    left: 0px;
+    font-weight: 500;
+}
+.form-group.material-style .form-control:focus {
+    box-shadow: inset 0px -1px 0px blue;
+    border-color: blue;
+}
+.form-group.material-style .form-control:focus + label {
+    top: -18px;
+    font-size: 11px;
+    color: blue;
+    font-weight: 500;
+}
+.form-group.material-style label {
+    position: absolute;
+    top: -18px;
+    font-weight: 500;
+    font-size: 11px;
+    color: blue;
+    transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+.overlay {
+    background-color: rgba(42, 54, 59, 0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 150ms ease-in;
+  }
+  .overlay.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .btn {
+    display: inline-block;
+    font-family: "Poppins", sans-serif;
+    padding: 0.4rem;
+    border-radius: 4.8rem;
+    box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+    outline: 0;
+    background: transparent;
+    border: 0;
+    margin: auto;
+    font-size: 1.0rem;
+    min-width: 8rem;
+    color: white;
+    transition: all 100ms ease-in;
+  }
+  .btn i {
+    display: inline-block;
+    margin-left: 1rem;
+    position: relative;
+    right: 0;
+    transition: all 100ms ease-in;
+    pointer-events: none;
+  }
+  .btn:hover {
+    cursor: pointer;
+  }
+  .btn:hover i {
+    right: -1rem;
+  }
+  .btn.btn-accept {
+    background-color: #4bb543;
+  }
+  .btn.btn-accept:hover {
+    background-color: #5abf52;
+  }
+  .btn.btn-cancel {
+    background-color: #ff3d3d;
+  }
+  .btn.btn-cancel:hover {
+    background-color: #ff5757;
+  }
+  :root {
+    --angle: 0deg;
+  }
+  
+  * {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .bg {
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100vh;
+    z-index: 2;
+    background: linear-gradient(45deg, #3f51b1 0%, #5a55ae 13%, #7b5fac 25%, #8f6aae 38%, #a86aa4 50%, #cc6b8e 62%, #f18271 75%, #f3a469 87%, #f7c97822 100%);
+    animation: gradient-change 5s linear infinite;
+  }
+  
+  @keyframes gradient-change {
+    0% {
+      filter: hue-rotate(0deg) brightness(1);
+    }
+    100% {
+      filter: hue-rotate(90deg) brightness(1.5);
+    }
+    100% {
+      filter: hue-rotate(360deg) brightness(1);
+    }
+  }
