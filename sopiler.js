@@ -40,7 +40,7 @@ function spoiler() {
         Swal.fire({
             position: 'center',
             icon: 'warning',
-            title: '<h5>❗❗ Choose what type of separator you want ❗❗</h5>',
+            title: '<h6 style="font-size:18px;"><b>❗❗ Choose what type of separator you want ❗❗</b></h6>',
             showConfirmButton: false,
             timer: 2000
         })
