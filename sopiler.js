@@ -4,7 +4,7 @@ function spoiler() {
     var separator = document.getElementById("separator").value;
     if(separator == '1'){
         //console.log(3)
-        var sep = "\n"
+        var sep = ""
         if (document.getElementById("checkbox").checked) {
             var spoiler_message = warning + ' '+ sep + ' '.repeat(2575) + message;
         } else {
