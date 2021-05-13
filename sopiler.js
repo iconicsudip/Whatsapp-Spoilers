@@ -1,14 +1,50 @@
 function spoiler() {
     var warning = document.getElementById("warning").value;
     var message = document.getElementById("message").value;
-    if (document.getElementById("checkbox").checked) {
-        var spoiler_message = warning + ' ' + ' '.repeat(2575) + message;
-    } else {
-        var spoiler_message = warning + ' ' + '\u200B'.repeat(4000) + message;
+    var separator = document.getElementById("separator").value;
+    if(separator == '1'){
+        //console.log(3)
+        var sep = "\n"
+        if (document.getElementById("checkbox").checked) {
+            var spoiler_message = warning + ' '+ sep + ' '.repeat(2575) + message;
+        } else {
+            var spoiler_message = warning + ' ' + sep + '\u200B'.repeat(4000) + message;
+        }
+        document.getElementById('Afterenter').innerText = "This is your spoil message";
+        document.getElementById('Afterenter1').innerText = "Here it is";
+        document.getElementById('spoiler').value = spoiler_message;
+    }else if(separator == '2'){
+        //console.log(3)
+        var sep = "\n\n"
+        if (document.getElementById("checkbox").checked) {
+            var spoiler_message = warning + ' '+ sep + ' '.repeat(2575) + message;
+        } else {
+            var spoiler_message = warning + ' ' + sep + '\u200B'.repeat(4000) + message;
+        }
+        document.getElementById('Afterenter').innerText = "This is your spoil message";
+        document.getElementById('Afterenter1').innerText = "Here it is";
+        document.getElementById('spoiler').value = spoiler_message;
+    }else if(separator == '3'){
+        //console.log(3)
+        var sep = "\n\n\n"
+        if (document.getElementById("checkbox").checked) {
+            var spoiler_message = warning + ' '+ sep + ' '.repeat(2575) + message;
+        } else {
+            var spoiler_message = warning + ' ' + sep + '\u200B'.repeat(4000) + message;
+        }
+        document.getElementById('Afterenter').innerText = "This is your spoil message";
+        document.getElementById('Afterenter1').innerText = "Here it is";
+        document.getElementById('spoiler').value = spoiler_message;
     }
-    document.getElementById('Afterenter').innerText = "This is your spoil message";
-    document.getElementById('Afterenter1').innerText = "Here it is";
-    document.getElementById('spoiler').value = spoiler_message;
+    else{
+        Swal.fire({
+            position: 'center',
+            icon: 'warning',
+            title: 'Choose any one option',
+            showConfirmButton: false,
+            timer: 2000
+        })
+    }
 }
 function clicked() {
     var copytext = document.getElementById("spoiler");
@@ -64,4 +100,3 @@ function updateCounter(){
     .then((data) => document.getElementsByClassName('count')[0].innerHTML = data.value);
 }
 updateCounter();
-/*backstyle */
